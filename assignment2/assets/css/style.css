@@ -15,9 +15,6 @@ a {
 
 a:hover {
 
-	position: relative;
-	width: 287px;
-	text-align: center;
 	color: #4aaaa5;
 
 }
@@ -29,10 +26,7 @@ ul {
 
 li {
 
-	display: inline;
-	padding: 0px 15px;
-	border-right: solid 1px #cccccc;
-	font-size: 14px;
+
 
 }
 
@@ -71,7 +65,7 @@ button {
 
 textarea {
 
-		padding: 15px 0px 0px 15px;
+		margin-top: 10px;
 		border-color: #D3D3D3;
 
 }
@@ -152,8 +146,6 @@ textarea {
 
 
 #wrapper {
-	background-image: url(../images/bg.png);
-	width: 100%;
 	/*width: 960px;*/
 	overflow: auto;
 	margin: 0 auto;
@@ -325,6 +317,32 @@ textarea {
 	color: #FFFFFF;
 }
 
+.col-md-3 {
+
+	text-align: center;
+}
+
+.col-md-12 {
+	text-align: center;
+	border-top: solid 3px #4aaaa5;
+	margin-top: 30px;
+	padding: 25px 0px 25px 0px;
+	color: #D3D3D3;
+	
+}
+
+.col-md-2 {
+
+	text-align: center;
+
+}
+
+.col-md-4 {
+
+	text-align: center;
+
+}
+
 /* FONTS */
 
 h1 {
@@ -345,6 +363,7 @@ h3 {
 	}
 
 h4 {
+	text-align: center;
 	font-size: 14px;
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif; 
 }
@@ -419,6 +438,7 @@ h4 {
 		position: static; 
 	}
 	
+
 
 }
 
