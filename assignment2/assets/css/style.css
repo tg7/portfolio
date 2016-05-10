@@ -323,24 +323,11 @@ textarea {
 }
 
 .col-md-12 {
-	text-align: center;
 	border-top: solid 3px #4aaaa5;
 	margin-top: 30px;
 	padding: 25px 0px 25px 0px;
 	color: #D3D3D3;
 	
-}
-
-.col-md-2 {
-
-	text-align: center;
-
-}
-
-.col-md-4 {
-
-	text-align: center;
-
 }
 
 /* FONTS */
