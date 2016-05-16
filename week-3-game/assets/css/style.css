@@ -18,3 +18,12 @@ body {
     }
 
 }
+
+/*  ID's */
+
+.gamebox {
+
+	border: 3px solid black;
+	height: 400px;
+
+}
