@@ -1,41 +1,33 @@
-window.onload = function () {.
+//window.onload = function () {.
 
-var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'y', 'z'];
+var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'y', 'z'];
 
-}
+
 
 //On-key up function
 
+		var wins = 0;
+		var losses = 0;
+		var guessesLeft = 0;
+	
 	document.onkeyup = function(event) {
-		var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+		if (guessesLeft >= 0) {
+			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			// var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
 	}
 	
 	function loadWords() {
 		var word = '';
+		var guesses = ['_', '_', '_', '_', '_', '_'];
 
-		// Words (Add Math.Random to word var)
+		var word = ['b', 'r', 'a', 'v', 'e', 's'];
+		for (var i = 0; i< word.length;i++) {
+			//check word[i] == userGuess
 
-		var word = ;
-
-		var guess = [ ];
-
-		var lives = ;
-
-		var counter = ;
-
-		// Spaces In Word
-
-		var spaces = ?;
-
-
-		// Grab Elements From The Array 
-
-		document.getElementById('alphabet');
-	}
-
-		// For Loop for Alphabet
-
-		for (var i = 0; i < alphabet.length; i++) {
-
-
+			//then show the letter on the page
+			
 		}
+
+
+	}
