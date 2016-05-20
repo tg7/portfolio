@@ -14,7 +14,7 @@
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<script type="text/javascript" href="assets/javascript/game.js"></script>
+
 
 </head>
 <body>
@@ -50,14 +50,14 @@
 			<h5>Used Letters</h5>
 		</div>
 		<div class="col-md-6 text-center gamebox">
-			<h5>Press Any Key To Get Started</h5>
-				<input type="text" maxlength="1" placeholder="Type a Letter Here"/>
+			<p id="instructions">Press Any Key To Get Started</p>
 				<br/>
 			<h5>Wins</h5>
 				<br/>
 			<h5>Current Word</h5>
+				<div id="boxes"></div>
 				<br/><!--Add Number of spaces for word Here-->
-			<h5>Number Of Guesses Remaining</h5>
+			<div id="remaining">Number Of Guesses Remaining</div>
 				<br/><!--Add Number Of Guesses Here<-->
 			<h5>Letter's Already Guessed</h5>
 				<br/><!--Javascript will provide guessed letters here-->
@@ -71,10 +71,9 @@
 		<div class="col-mid-4 text-center">
 		</div>
 	</div>
-
-	
-
 </div>
 
+	<script type="text/javascript" href="assets/javascript/game.js"></script>
 </body>
+
 </html>
