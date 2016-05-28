@@ -1,0 +1,138 @@
+
+body {
+	 
+	background: url(../images/bg.jpg);
+	width: 100%;
+	height: 100%;
+}
+
+/* ID's */
+
+#header {
+
+
+}
+
+#wrapper {
+
+
+}
+
+#top {
+	
+	text-align: center;
+	padding: 15px;
+	overflow: auto;
+}
+
+#characters {
+
+	height: 225px;
+	text-align: center;
+	width: 25%;
+	float: left;
+
+}
+
+#battleNotes {
+	width: 25%;
+	float: left;
+	height: 225px;
+	text-align: center;
+}
+
+#fight {
+	width: 25%;
+	float: left;
+	height: 225px;
+}
+
+#rival {
+
+	width: 25%;
+	height: 225px;
+	text-align: center;
+	float: left;
+
+}
+
+
+/* Classes */
+
+.bg {
+
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+}
+
+.imagespacing {
+
+	padding: 5px;
+	padding-top: 10px;
+
+}
+
+.boxes {
+
+	padding: 15px;
+	background: white;
+	width: 125px;
+	height: 150px;
+	border: solid 3px red;
+	display: inline-block;
+	text-align: center;
+
+}
+
+.attack {
+
+	background-color: red;
+
+}
+
+.health {
+
+
+}
+
+.health2 {
+
+
+}
+/* Fonts */
+
+h1 {
+	font-size: 30px; 
+	font-family: 'Candal', Arial sans-serif;
+	text-align: center;
+
+}
+
+h2 {
+	font-size: 18px; 
+	font-family: 'Candal', Arial sans-serif;
+	text-align: center;
+	margin-bottom: 13px;
+
+}
+
+img {
+
+	background-color: white;
+	opacity: .7;
+}
+
+img:hover {
+
+	background-color: white;
+	opacity: 1.0;
+}
+
+p {
+
+}
+
+button {
+	margin-left: 43%;
+	padding: 5px 5px 5px 5px;
+}
