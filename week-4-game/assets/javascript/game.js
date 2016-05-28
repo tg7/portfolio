@@ -2,150 +2,102 @@
 
 window.onload = function () { 
 
-alert('Choose Your 1st Character!')
-	
-	function loadMessage () {
 
+// Reset Function
 
-	}
-
-
-// function reset(){
-// 	$('#attackMessage').;
-// };
+function reset(){
+	isRivalPicked = false;
+};
 
 // Audio
 
 var audio = new Audio('assets/tmntThemeSong.mp3');
 	audio.play();
 
-// Character Life
+// Character Object Data
 
-var donLife = 160;
-var leoLife = 100;
-var michLife = 75;
-var raphLife = 120;
+var characters = {
+	Donatello: {
+		name: 'Donatello',
+		attack: 26,
+		life: 160
+	},
+	Leonardo: {
+		name: 'Leonardo',
+		life: 100,
+		attack: 22		
+	},
+	Raphael: {
+		name: 'Raphael',
+		life: 120,
+		attack: 10
+	}, 
+	Michelangelo: {
+		name: 'Michelangelo',
+		life: 75,
+		attack: 12
+	}
+};
 
-// Character Attack
+// Characters Picked/Descriptions
 
-var donattack = 26;
-var leoattack = 22;
-var michattack = 12;
-var raphattack = 10;
+var isCharacterPicked = false;
+var isRivalPicked = false;
 
-// Reset Function 
-
-// function resetHealth(){
-// 	$('#battleNotes').replaceWith('You\'ve attacked for' + raphattack);
-	
-// };
+var character;
+var rival;
 
 // Makes Attack Button Clickable & Append Text To Defender Div
 
-$('.attack').on('click', function() {
-	// alert('I\'ve been clicked!');
-	$('.attackMessage').html('You\'ve attacked for ' + donattack + '<br> You\'ve been attacked for ' + leoattack);
-	donLife = donLife - leoattack;
 	
-	// $('#rival').append(leoattack);
-	// raphLife = raphLife - donattack;
-
-	// if (charatcterattack1)
-	// $('.attackMessage').append('You\'ve attacked for ' + raphattack).fadeOut(5000);;
-	// donLife = donLife - raphattack;
-
-	// Put's Don's Life In Rival Section
-
-	$('.health').html('Health: ' + donLife);
-
-
-	$('.health2').html('Health: ' + leoLife)
-	leoLife = leoLife - donattack;
-	
-	//Fade Out 
-
-	if (leoLife <= 0) {		
-		setTimeout(rmLeo, 2000);
-		$('#leo').html('Leonardo has been defeated');
-
-	}
-
-	else {
-
-	}
-
-	function rmLeo () {
-		$('#leo').hide();
-
+function rmRival () {
+	$('#' + rival.name).hide();
 
 	};
 
-	// else {
-	// 	alert ('You Win!')
 
-	// }
+// On click function for Button & Attacks
 
-	// }
+	$('.attack').on('click', function() {
 
-});
+
+	$('.attackMessage').html('You\'ve attacked for ' + character.attack + '<br> You\'ve been attacked for ' + rival.attack);
+
+	character.life = character.life - rival.attack;
+	rival.life = rival.life - character.attack;
+
+	if (rival.life <= 0) {		
+		setTimeout(rmRival, 2000);
+		$('#' + rival.name).html(rival.name + ' has been defeated');
+		reset();
+	}
+
+	// $('.health').html('Health: ' + character.life);
+	// $('.health2').html('Health: ' + rival.life)
+	
+	
+	});
 
 
 // Makes 4 Characters Clickable & Appends To Characters Div
 
-$('#don').on('click', function(fight) {
-	alert('I clicked Don');
-	
-	// Appends To Characters Div
+$('.boxes').on('click', function(fight) {
+	if (isCharacterPicked == false) {
+		$(this).appendTo('#characters');
+		var id = ($(this).attr('id'));
 
-	// Subtract Health 
+		//character = the character that was clicked
+		character = characters[id];
+		console.log('character is' , character);
 
-	$('#don').appendTo('#characters');
-
+		isCharacterPicked = true;
+	} else if (isRivalPicked == false && isCharacterPicked == true) {
+		$(this).appendTo('#rival');
+			isRivalPicked = true;
+			//the rival = the rival that was clicked
+			var id = ($(this).attr('id'));
+			rival = characters[id];
+	} 
 });
-
-$('#leo').on('click', function(fight) {
-	alert('I clicked Leo');
-
-	$('#leo').appendTo('#rival');
-
-});
-
-$('#mich').on('click', function(fight) {
-	alert('I clicked Mich');
-
-	$('#mich').appendTo('#characters');
-
-});
-
-$('#raph').on('click', function(fight) {
-	alert('I click Raph');
-
-	$('#raph').appendTo('#characters');
-
-});
-
-
-// If & Else Statements
-
-//attacker = null;
-//defender = null;
-
-// if both == null than good
-
-// if both !== null only 2 fighters at once
-
-// if there is an attacker and defender return
-
-
-
-
-
-
-
-
-
-
-
-
 
 }
