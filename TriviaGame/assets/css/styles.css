@@ -1,0 +1,26 @@
+/* Body */
+
+body {
+
+background: url('../images/gameBg.jpg');
+
+}
+
+/* Container for Questions */
+
+.questionArea {
+
+	height: 500px;
+	width: 75%;
+	border: 2px blue solid;
+	text-align: center;
+	margin: 0 auto;
+
+
+}
+
+.whiteText { 
+
+	color: white;
+
+ }
