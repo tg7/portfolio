@@ -1,48 +1,49 @@
 $( document ).ready(function() {
-        console.log( "document loaded" );
-  
+console.log('I worked');
 
-// Variables
-	
-	var
-	var 
 
+ $('button').on('click', function() {
+
+ 		// var correctAnswer = true;
+
+ 		alert($(this).attr('data-answer'));
+ 		console.log('data-answer');
+
+ 		if ($(this).attr('data-answer') == false) {
+ 			alert('You Chose Wrong!');
+ 			
+ 		};
+
+ })
+/*
 // Starts The Game On Click
-	$('#beginGame').on('click', function() {
+		$('#beginGame').on('click', function(e) {
 
-// Starts Interval Timer
+			console.log('Welcome To Sports Trivia!');
 
-	setInterval(timeClock, 30000) {
+			console.log('Are You Ready?');
 
-	$('#timer').append(timeClock);
+	// Variables
+	
+		// var
+		// var 
+
+	
+
+		// $('#beginGame').addClass('btn btn-danger active');
+			console.log('this worked');
+
+	// Starts Interval Timer
+
+			// setInterval(timeClock, 30000) {
+
+			// $('#timer').append(timeClock);
 
 
-	};
+			// };
 
+
+		});
+*/
 
 	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  });

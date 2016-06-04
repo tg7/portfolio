@@ -6,13 +6,14 @@
 
 <title>Sports Trivia</title>
 
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
 <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
 
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
-<script type="javascript" src="assets/javascript/app.js"></script>
-<script type="javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
 
 </head>
 
@@ -57,16 +58,16 @@
 		</div>
 		<div id="answers1" class="row">
 			<div class="col-md-3 text-left">
-				A) New York Knicks
+				<button data-answer="false" class="btn btn-primary active">A) New York Knicks</button>
 			</div>
 			<div class="col-md-3 text-left">
-				B) New York Nets
+				<button data-answer="true" class="btn btn-primary active">B) New York Nets</button>
 			</div>
 			<div class="col-md-3 text-left">
-				C) New York Giants
+				<button data-answer="false" class="btn btn-primary active">C) New York Giants</button>
 			</div>
 			<div class="col-md-3 text-left">
-				D) New York Rangers
+				<button data-answer="false" class="btn btn-primary active">A) New York Rangers</button>
 			</div>
 		</div>
 
@@ -86,16 +87,16 @@
 		</div>
 		<div id="answers1" class="row">
 			<div class="col-md-3 text-left">
-				A) New York Yankees
+				<button data-answer="false" class="btn btn-primary active">A) New York Yankees</button>
 			</div>
 			<div class="col-md-3 text-left">
-				B) Chicago Cubs
+				<button data-answer="false" class="btn btn-primary active">B) Chicago Cubs</button>
 			</div>
 			<div class="col-md-3 text-left">
-				C) Brooklyn Dodgers
+				<button data-answer="false" class="btn btn-primary active">C) Brooklyn Dodgers</button>
 			</div>
 			<div class="col-md-3 text-left">
-				D) Boston Red Sox
+				<button data-answer="true" class="btn btn-primary active">D) Boston Red Sox</button>
 			</div>
 		</div>
 
@@ -115,16 +116,16 @@
 		</div>
 		<div id="answers1" class="row">
 			<div class="col-md-3 text-left">
-				A) Miami, FL
+				<button data-answer="false" class="btn btn-primary active">A) Miami, FL</button>
 			</div>
 			<div class="col-md-3 text-left">
-				B) San Jose, CA
+				<button data-answer="false" class="btn btn-primary active">B) San Jose, CA</button>
 			</div>
 			<div class="col-md-3 text-left">
-				C) Los Angeles, CA
+				<button data-answer="true" class="btn btn-primary active">C) Los Angeles, CA</button>
 			</div>
 			<div class="col-md-3 text-left">
-				D) Tampa, FL
+				<button data-answer="false" class="btn btn-primary active">D) Tampa, FL</button>
 			</div>
 		</div>
 
@@ -139,6 +140,8 @@
 
 
 </div>
+
+<script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
 
