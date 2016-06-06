@@ -1,23 +1,30 @@
 $( document ).ready(function() {
-console.log('I worked');
-alert('Click Button To Begin Game!');
+// alert('Click Button To Begin Game!');
 
 
  $('#beginGame').on('click', function() {
+
+ 		// Disables the start button
+
+ 		$('#beginGame').prop('disabled', true);
 
  		// Makes Horn (Start) Noise 
  		var audio = new Audio('assets/tick.wav');
    	audio.play();
 
- 		// Changes Button To Red
- 		$('#beginGame').addClass('btn-danger');
-
-
  		// Tells If Buttons is incorrect or true
  		if ($(this).attr('data-answer') == false) {
  			alert('You Chose Wrong!');
+ 			console.log('This is Wrong!');
  			
+ 		// Resets Button (Makes it Clickable Again)
+
  		};
+ 				function reset() {
+
+ 					$('#beginGame').prop('disabled', false);
+
+ 				}
 
     // Timer Function
     
@@ -25,6 +32,7 @@ alert('Click Button To Begin Game!');
      
         function run(){
             counter = setInterval(decrement, 1000);
+
         }
 
         function decrement(){
@@ -37,8 +45,10 @@ alert('Click Button To Begin Game!');
                 var audio = new Audio('assets/buzzer.wav');
    							audio.play();
 
-   							 stop();
+   							reset()
+   							stop();
                 // alert('Time Up!')
+                
             }
             
         }
@@ -47,6 +57,7 @@ alert('Click Button To Begin Game!');
             clearInterval(counter);
         }
         run();
+
 
 
 
