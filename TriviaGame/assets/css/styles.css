@@ -11,11 +11,7 @@ background: url('../images/gameBg.jpg');
 .questionArea {
 
 	height: 500px;
-	width: 75%;
-	border: 2px blue solid;
-	text-align: center;
-	margin: 0 auto;
-
+	border: 2px black solid;
 
 }
 
@@ -23,4 +19,21 @@ background: url('../images/gameBg.jpg');
 
 	color: white;
 
+ }
+
+ /* ID's */
+
+ #correct {
+
+ 	border-top: 2px black solid;
+ 	padding-top: 10px;
+ 	height: 25px;
+
+ }
+
+ #incorrect {
+
+ 	border-top: 2px black solid;
+ 	padding-top: 10px;
+ 	height: 25px;
  }

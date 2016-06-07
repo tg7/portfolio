@@ -3,9 +3,11 @@ $( document ).ready(function() {
 
 // Global Variables 
 
-	var correct = 0;
-	var incorrect = 0;
+	var correct = null;
+	var incorrect = null;
+	var questions = 5;
 	var time = 10;
+	var results = correct/questions;
 
 // Clears Counter
 
@@ -18,7 +20,7 @@ $( document ).ready(function() {
 
 // Starts Game On Button Click
 
- 	$('#beginGame').on('click', function() {
+ $('#beginGame').on('click', function() {
 
  	 	// Disables the start button and appends clock to timer Div
 
@@ -30,7 +32,12 @@ $( document ).ready(function() {
 
 function q1() {
 
-	$('#gameArea').append('<br>Question 1) Which of the following New York sports teams plays in the Barclays Center?<br>');
+	// Starts Ticking Sound
+
+	// var audio = new Audio('assets/tickTock.wav');
+ //   	audio.play();
+
+	$('#gameArea').append('<br><strong>Question 1:</strong> Which of the following New York sports teams plays in the Barclays Center?<br>');
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">New York Knicks</button><br>'); 
 	$('#gameArea').append('<br><button data-answer="true" class="btn btn-primary active" id="rightAnswer">Brooklyn Nets</button><br>');
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">New York Giants</button><br>')
@@ -39,6 +46,7 @@ function q1() {
 	// If User Chooses Correct Answer
 
 	$('#rightAnswer').on('click', function() {
+		
 
 		var audio = new Audio('assets/correct.wav');
    	audio.play();
@@ -47,6 +55,7 @@ function q1() {
 		$('#correct').html(correct);	
 		$('#gameArea').html('You are correct!<br><br><img src="https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif" height="300" width="500"<br>');
 
+		
 		stopTick();
 		setTimeout(q2, 3000);
 
@@ -55,14 +64,16 @@ function q1() {
 	// If User Chooses Incorrect Answer
 
 	$('.incorrect').on('click', function() {
+		
 	
 		var audio = new Audio('assets/buzzer.wav');
    	audio.play();
-
+ 
 		incorrect++;
 		$('#incorrect').html(incorrect);		
 		$('#gameArea').html('You are incorrect!<br><strong>Brooklyn Nets</strong> was the correct answer!<br><br><img src="https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif" height="300" width="500"<br>');
 
+		
 		stopTick();
 		setTimeout(q2, 3000);
 
@@ -72,10 +83,18 @@ function q1() {
   }
 
    function q2() {
-  reset();
+   
+  time = 10;
+  $('#timer').html('<h4>' + 'Time Remaining: ' + time + '</h4>');
   counter = setInterval(timer, 1000);
+
+
+  // Starts Ticking Sound
+
+  // var audio = new Audio('assets/tickTock.wav');
+  //  	audio.play();
  
-	$('#gameArea').html('<br>Question 2) Which baseball team did Babe Ruth begin his career with?<br>');
+	$('#gameArea').html('<br><strong>Question 2:</strong> Which baseball team did Babe Ruth begin his career with?<br>');
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">New York Yankees</button><br>'); 
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Chicago Cubs</button><br>');
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Brooklyn Dodgers</button><br>');
@@ -123,10 +142,11 @@ function q1() {
   }
 
   function q3() {
-  reset();
+  time = 10;
+  $('#timer').html('<h4>' + 'Time Remaining: ' + time + '</h4>');
   counter = setInterval(timer, 1000);
   
-	$('#gameArea').html('<br>Question 3) Which city hosted the first ever Superbowl?<br>');
+	$('#gameArea').html('<br><strong>Question 3:</strong> Which city hosted the first ever Superbowl?<br>');
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Miami, FL</button><br>'); 
 	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">San Jose, CA</button><br>');
 	$('#gameArea').append('<br><button data-answer="true" class="btn btn-primary active" id="rightAnswer">Los Angeles, CA</button><br>')
@@ -172,25 +192,130 @@ function q1() {
 	}
 
   }
-
- 		// Begins Ticking Sound  
- 		// var audio = new Audio('assets/tick.wav');
-   // 	audio.play();
-
-
- 		// // Tells If Buttons is incorrect or true
- 		// if ($(this).attr('data-answer') == false) {
- 		// 	alert('You Chose Wrong!');
- 		// 	console.log('This is Wrong!');
  			
- 		// Resets Button (Makes it Clickable Again)
+ 	function q4() {
+  time = 10;
+  $('#timer').html('<h4>' + 'Time Remaining: ' + time + '</h4>');
+  counter = setInterval(timer, 1000);
+  
+	$('#gameArea').html('<br><strong>Question 4:</strong> Who holds the NBA Record for most points scored in a quarter?<br>');
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Wilt Chamberlin</button><br>'); 
+	$('#gameArea').append('<br><button data-answer="true" class="btn btn-primary active" id="rightAnswer">Klay Thompson</button><br>');
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">George Gervin</button><br>');
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Kobe Bryant</button><br>');
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">None Of The Above</button><br>')
 
- 		// };
- 		// 		function reset() {
+	// Displays Correct Answer
 
- 		// 			$('#beginGame').prop('disabled', false);
+	$('#rightAnswer').on('click', function() {
+		stopTick();
 
- 		// 		}
+		var audio = new Audio('assets/correct.wav');
+   	audio.play();
+
+		correct++;
+	$('#correct').html(correct);	
+	$('#gameArea').html('You are correct!<br><br><img src="https://media.giphy.com/media/1idQ5FW9lpJZu/giphy.gif" height="300" width="500"<br>');
+	setTimeout(q5, 3000);
+
+	});
+   
+	// If User Chooses Incorrect Answer
+
+	$('.incorrect').on('click', function() {
+		stopTick();
+
+		var audio = new Audio('assets/buzzer.wav');
+   	audio.play();
+
+		incorrect++;
+	$('#incorrect').html(incorrect);	
+	$('#gameArea').html('You are incorrect!<br><strong>Klay Thompson - 37 Points</strong> was the correct answer!<br><br><img src="https://media.giphy.com/media/1idQ5FW9lpJZu/giphy.gif" height="300" width="500"<br>');
+	setTimeout(q5, 3000);
+	});
+
+	function timeup () {
+
+
+		incorrect++;
+	$('#incorrect').html(incorrect);	
+	alert('You Ran Out Of Time!');
+	$('#gameArea').append('<br><img src="https://media.giphy.com/media/1idQ5FW9lpJZu/giphy.gif" height="300" width="500"<br>');
+	setTimeout(q5, 3000);
+	}
+
+  }
+
+  function q5() {
+  time = 10;
+  $('#timer').html('<h4>' + 'Time Remaining: ' + time + '</h4>');
+  counter = setInterval(timer, 1000);
+  
+	$('#gameArea').html('<br><strong>Question 5:</strong> Who won the NBA Championship in 2007?<br>');
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Cleveland Cavaliers</button><br>'); 
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Detroit Pistons</button><br>');
+	$('#gameArea').append('<br><button data-answer="true" class="btn btn-primary active" id="rightAnswer">San Antonio Spurs</button><br>')
+	$('#gameArea').append('<br><button data-answer="false" class="btn btn-primary incorrect active">Miami Heat</button><br>')
+
+	// Displays Correct Answer
+
+	$('#rightAnswer').on('click', function() {
+		stopTick();
+
+		var audio = new Audio('assets/correct.wav');
+   	audio.play();
+
+		correct++;
+	$('#correct').html(correct);	
+	$('#gameArea').html('You are correct!<br><br><img src="https://media.giphy.com/media/gHIKoRtXJIs36/giphy.gif" height="300" width="500"<br>');
+	setTimeout(total, 3000);
+
+	});
+   
+	// If User Chooses Incorrect Answer
+
+	$('.incorrect').on('click', function() {
+		stopTick();
+
+		var audio = new Audio('assets/buzzer.wav');
+   	audio.play();
+
+		incorrect++;
+	$('#incorrect').html(incorrect);	
+	$('#gameArea').html('You are incorrect!<br><strong>San Antonio Spurs</strong> was the correct answer!<br><br><img src="https://media.giphy.com/media/gHIKoRtXJIs36/giphy.gif" height="300" width="500"<br>');
+	setTimeout(total, 3000);
+	});
+
+	function timeup () {
+
+
+		incorrect++;
+	$('#incorrect').html(incorrect);	
+	alert('You Ran Out Of Time!');
+	$('#gameArea').append('<br><img src="https://media.giphy.com/media/gHIKoRtXJIs36/giphy.gif" height="300" width="500"<br>');
+	setTimeout(total, 3000);
+	}
+
+  }
+ 	// End Of Game
+
+ 	function total() {
+  
+  var results = correct/questions * 100;
+
+	$('#gameArea').html('<br>' + 'You Scored ' + results + '%' + '<br>');
+	$('#gameArea').append('<br><button class="btn btn-default active" id="resetGame">Play Again?</button><br>'); 
+
+	// Resets Game If Clicked
+
+		$('#resetGame').on('click', function() {
+
+			window.location.href="index.html";
+			console.log('Did I work?');
+
+		});
+	
+	};
 
     // Timer Function
     
@@ -209,7 +334,7 @@ function q1() {
             if (time <= 0){
             incorrect++;
             $('#incorrect').html(incorrect);	
-            alert('You Ran Out Of Time!');
+            // alert('You Ran Out Of Time!');
 						console.log('You Ran Out Of Time!');
 						setTimeout(q2, 3000);
 						stopTick();
@@ -229,9 +354,12 @@ function q1() {
 					clearTimeout(counter);
 					time = 10;
 				};
-    });
+		});
 
 });
+    
+
+
 
 
 
