@@ -67,6 +67,14 @@ function rmRival () {
 
 	};
 
+
+// Hides Question
+
+function rmRival () {
+	$('#' + rival.name).hide();
+
+	};
+	
 // On click function for Button & Attacks
 
 	$('.attack').on('click', function() {
