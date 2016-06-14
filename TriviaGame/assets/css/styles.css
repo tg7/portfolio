@@ -37,3 +37,7 @@ background: url('../images/gameBg.jpg');
  	padding-top: 10px;
  	height: 25px;
  }
+
+ .buttonStyle {
+ 	border: 2px red solid;
+ }

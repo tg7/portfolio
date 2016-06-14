@@ -17,23 +17,28 @@ $( document ).ready(function() {
 		correct_answer: 1,
 		gif: 'https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif'
 	},{
-		question_text: 'Which of the following New York sports teams plays in the Barclays Center?',
-		choices: ['New York Knicks', 'Brooklyn Nets', 'New York Giants', 'New York Rangers'],
-		correct_answer: 1,
-		gif: 'https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif'
+		question_text: 'Who is the only team to come back from a 0-3 defifit in an MLB Playoff Series?',
+		choices: ['New York Yankees', 'New York Mets', 'San Francisco Giants', 'Boston Red Sox'],
+		correct_answer: 3,
+		gif: 'https://media.giphy.com/media/AwObdvFae9ItO/giphy.gif'
 	},{
-		question_text: 'Which of the following New York sports teams plays in the Barclays Center?',
-		choices: ['New York Knicks', 'Brooklyn Nets', 'New York Giants', 'New York Rangers'],
-		correct_answer: 1,
-		gif: 'https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif'
+		question_text: 'Who has the scored the most points in a quarter in an NBA game?',
+		choices: ['Kobe Bryant', 'Wilt Chamberlin', 'Klay Thompson', 'Lebron James'],
+		correct_answer: 2,
+		gif: 'https://media.giphy.com/media/1idQ5FW9lpJZu/giphy.gif'
 	},{
-		question_text: 'Which of the following New York sports teams plays in the Barclays Center?',
-		choices: ['New York Knicks', 'Brooklyn Nets', 'New York Giants', 'New York Rangers'],
-		correct_answer: 1,
-		gif: 'https://media.giphy.com/media/nMdd7KBqLTomk/giphy.gif'
+		question_text: 'Who won the 2014 NBA Championship?',
+		choices: ['Cleveland Cavaliers', 'Miami Heat', 'Golden State Warriors', 'San Antonio Spurs'],
+		correct_answer: 3,
+		gif: 'https://media4.giphy.com/media/3o7abyE8LFnuXftvfW/200.gif'
+	},{
+		question_text: 'Who was the #1 overall pick in the NHL Draft?',
+		choices: ['Alexander Ovechkin', 'Sidney Crosby', 'Evgeni Malkin', 'Phil Kessel'],
+		correct_answer: 0,
+		gif: 'https://media0.giphy.com/media/IbXeXaDATB4L6/200_s.gif'
 	}];
 
-
+	var questionsList.choices = $('.buttonStyle');
 
 	    // Timer Function
 	    
