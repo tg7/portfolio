@@ -38,7 +38,7 @@ $( document ).ready(function() {
 		gif: 'https://media0.giphy.com/media/IbXeXaDATB4L6/200_s.gif'
 	}];
 
-	var questionsList.choices = $('.buttonStyle');
+	// var questionsList.choices = $('.buttonStyle');
 
 	    // Timer Function
 	    
