@@ -6,10 +6,16 @@
 
 <title>Sports Trivia</title>
 
-
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" >
 <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
 <link rel="stylesheet" href="assets/css/styles.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+<!--Font Awesome CDN-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+<!--Header and SideBar Fonts-->
+
+<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
@@ -19,13 +25,13 @@
 
 <body>
 
-<div class="container">
+	<div class="container">
 
-	<div class="row">
-		<div class="col-md-12 text-center">
-			<h1 class="whiteText">Sports Trivia</h1>
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<h1 class="whiteText"><i class="fa fa-futbol-o" aria-hidden="true"></i> Sports Trivia</h1>
+			</div>
 		</div>
-	</div>
 
 	<!--Jumbotron Div-->
 
@@ -34,40 +40,41 @@
 
 	<!--Click To Start & Timer-->
 
-		<div class="row">
-			<div class="col-md-6 text-center">
-				<button type="button" id="beginGame" class="btn btn-success active">Click To Start Game</button>
-			</div>
-			<div id="timer" class="col-md-6 text-center">
-				<h4>Time Remaining: </h4>
-			</div>
+	<div class="row">
+		<div class="col-md-6 text-center">
+			<button type="button" id="beginGame" class="btn btn-success active whiteText">Click To Start Game</button>
 		</div>
+		<div id="timer" class="col-md-6 text-center">
+			<h4 class="sideBarText">Time Remaining: </h4>
+		</div>
+	</div>
 		
 		<br>
 
 	<!--Content for questions-->
 
-		<div class="row">
-			<div class="col-md-2 text-center">
-			<h4>Correct</h4>
-			<div id="correct">
-			</div>
-			</div>
-			<div class="col-md-8 text-center" id="gameArea">
-			</div>
-			<div class="col-md-2 text-center">
-			<h4>Incorrect</h4>
-			<div id="incorrect">
-			</div>
-			</div>
+	<div class="row">
+		<div class="col-md-2 text-center">
+			<h4 class="sideBarText">Correct</h4>
+				<div id="correct">
+				</div>
 		</div>
+		<div class="col-md-8 text-center" id="gameArea">
+		</div>
+			<div class="col-md-2 text-center">
+				<h4 class="sideBarText">Incorrect</h4>
+					<div id="incorrect">
+					</div>
+			</div>
+	</div>
 
-		<br> 
+	<br> 
 <!--End Of Jumbotron-->
 
 	</div>
 
-		<br>
+
+	<br>
 
 <!--End Of Container-->
 	</div>
@@ -75,6 +82,5 @@
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 
 </body>
-
 
 </html>

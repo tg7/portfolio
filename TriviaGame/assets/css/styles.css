@@ -10,7 +10,7 @@ background: url('../images/gameBg.jpg');
 
 .questionArea {
 
-	height: 500px;
+	height: 550px;
 	border: 2px black solid;
 
 }
@@ -18,6 +18,14 @@ background: url('../images/gameBg.jpg');
 .whiteText { 
 
 	color: white;
+	font-family: 'Permanent Marker', cursive;
+
+ }
+
+.sideBarText { 
+
+	color: black;
+	font-family: 'Permanent Marker', cursive;
 
  }
 
@@ -39,5 +47,9 @@ background: url('../images/gameBg.jpg');
  }
 
  .buttonStyle {
- 	border: 2px red solid;
+ 	margin: 35px 10px 10px 10px;
  }
+
+
+
+
