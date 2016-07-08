@@ -1,38 +1,40 @@
 window.onload = function () {
 
+// Global Variables
 	var wins = 0;
 	var winsSpan = document.querySelector('#wins');
 	winsSpan.innerHTML = wins;
+
 	var losses = 0;
 	var lossesSpan = document.querySelector('#losses');
 	lossesSpan.innerHTML = losses;
+
 	var guessesLeft = 10;
 	var boxElement = document.getElementById('boxes');
-	console.log('boxElement', boxElement);
+	console.log(boxElement);
 	var wordArray = ['mets', 'dodgers', 'phillies', 'marlins', 'nationals'];
-	var answer = wordArray[Math.floor(Math.random() * wordArray.length)];
-	console.log(answer)
 
-	var computerChoices = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+	var answer = wordArray[Math.floor(Math.random() * wordArray.length)];
+
+	console.log(answer)
 
 	// Print letters to letters-used div
 
 	makeBoxes();
-	var boxes = [];
-	makeBoxes()
 	function makeBoxes() {
 		boxes = [];
 
-	 	for (var i = 0; i < answer.length; i++) {
-	 		boxes.push('_');
-	 	}
-	 	console.log(boxes)
+		 	for (var i = 0; i < answer.length; i++) {
+		 		boxes.push('__');
+		 		boxes.join('');
+		 	}
+	 	console.log(boxes);
 	 	boxElement.innerHTML = boxes;
 	 	return boxes;
 	 }
 
 	var remaining = document.getElementById('remaining');
-	console.log('remaining', remaining);
+	console.log(remaining);
 	function resetGame() {
 			boxes = makeBoxes();
 			guessesLeft = 10;
@@ -74,8 +76,10 @@ window.onload = function () {
 
 	}
 
-	// boxElement.innerHTML = boxes;
-	remaining.innerHTML = guessesLeft;
+// Shows number of guesses 
+	var chancesSpan = document.querySelector('#chances');
+	chancesSpan.innerHTML = guessesLeft;
+
 
 }
 
